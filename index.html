@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Linktree</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Animação personalizada para os botões */
+    .btn {
+      transition: all 0.3s ease;
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      background-color: #0a355c; /* Verde mais escuro ao passar o mouse */
+    }
+    /* Garante que o conteúdo principal empurre o rodapé para baixo */
+    .content-wrapper {
+      flex-grow: 1;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 flex flex-col items-center min-h-screen font-sans pt-12">
+  <!-- Conteúdo principal -->
+  <div class="content-wrapper flex flex-col items-center w-full">
+    <!-- Imagem de Perfil -->
+    <img src="https://raw.githubusercontent.com/gabrielsarzi/linktree/main/DENTAL%20DIRETO%20QUADRADO.png
+" alt="Foto de Perfil" class="w-32 h-32 rounded-full mb-6 shadow-lg">
+
+    <!-- Texto de Boas-Vindas -->
+    <h1 class="text-3xl font-bold text-gray-800 mb-2">Bem-vindo à Dental Direto!</h1>
+    <p class="text-gray-600 text-center max-w-md mb-8 px-4">Conecte-se com nossos canais oficiais e aproveite nossas soluções pensadas para você.
+    </p>
+
+    <!-- Botões -->
+    <div class="flex flex-col space-y-4 w-full max-w-xs px-4">
+      <a href="http://dentaldireto.com.br/" target="_blank" class="btn bg-emerald-500 text-white text-center py-3 rounded-lg shadow-md">
+        Loja Online
+      </a>
+      <a href="http://dentaldireto.com.br/" target="_blank" class="btn bg-emerald-500 text-white text-center py-3 rounded-lg shadow-md">
+        WhatsApp
+      </a>
+      <a href="http://dentaldireto.com.br/" target="_blank" class="btn bg-emerald-500 text-white text-center py-3 rounded-lg shadow-md">
+        Catalogo
+      </a>
+     <!-- <a href="https://seusite.com" target="_blank" class="btn bg-emerald-500 text-white text-center py-3 rounded-lg shadow-md">
+        Meu Site
+      </a>-->
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <footer class="w-full bg-gray-200 py-4 mt-12">
+    <div class="text-center text-gray-600 text-sm">
+      <p>CNPJ: 12.345.678/0001-90</p>
+      <p>Todos os direitos reservados © 2025</p>
+      <p>Desenvolvido por Gabriel Sarzi</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript para interação dos botões -->
+  <script>
+    const buttons = document.querySelectorAll('.btn');
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        button.style.transform = 'scale(0.95)';
+        setTimeout(() => {
+          button.style.transform = 'translateY(-2px)';
+        }, 100);
+      });
+    });
+  </script>
+</body>
+</html>
